@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Location Tracking</string>
+    <string name="ok">OK</string>
+    <string name="got_it">Got it!</string>
+    <string name="settings">Settings</string>
+    <string name="no_thanks">No, thanks</string>
+    <string name="location_unknown">Don\'t know where you are, right now!</string>
+    <string name="error_unknown">Whoops, something is wrong!</string>
+    <string name="error_permissions_denied">To continue, please select \"Allow all the time\" for Location permissions</string>
+    <string name="location_rationale_title">Background location permissions</string>
+    <string name="location_rationale">We would like permission to your location even while the app is in the background so that we can provide you with a list of locations that you have been to. Please select \"Allow all the time\".</string>
+    <string name="location_background_permission_revoked">Location permissions revoked</string>
+    <string name="location_background_permission_denied">We may not be able to get your location all the time</string>
+    <string name="location_service_disabled">Location disabled</string>
+    <string name="enable_location_services_text">Please enable Location Services to receive location updates</string>
+    <string name="location_known">Your last known location is: %s</string>
+    <string name="your_locations">Your locations</string>
+
+    <!-- Shared preference keys -->
+    <string name="pref_key">location_tracking_prefs</string>
+
+    <!-- Main menu -->
+    <string name="location_history_menu_item">Location history menu item</string>
+    <string name="location_history">Your locations</string>
+    <string name="toggle_location_updates">Start or stop location updates</string>
+    <string name="stop_location_updates">Stop location updates</string>
+    <string name="start_location_updates">Start location updates</string>
+
+    <!-- Location rationale activity -->
+    <string name="location_rationale_long_title">Why location permissions</string>
+    <string name="location_rationale_long_description">The app requires the Location permissions so that it can continuously track your location and show you all the various locations you have been to. For the app to work in the background or when it is closed we ask that you \"Allow all the time\" in the Location permission setting.</string>
+
+    <string name="location_attribution_label">Access device location information</string>
+
+    <string name="channel_id">location_tracking_notification_channel</string>
+    <string name="channel_name">Location setting changes</string>
+    <string name="channel_description">Make sound and pop screen</string>
+</resources>

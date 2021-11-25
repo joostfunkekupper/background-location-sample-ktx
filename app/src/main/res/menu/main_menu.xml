@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/location_history"
+        android:contentDescription="@string/location_history_menu_item"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="@string/location_history" />
+
+    <item
+        android:id="@+id/toggle_updates"
+        android:contentDescription="@string/toggle_location_updates"
+        android:title="@string/stop_location_updates" />
+</menu>
