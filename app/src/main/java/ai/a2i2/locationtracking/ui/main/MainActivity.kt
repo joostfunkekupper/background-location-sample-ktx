@@ -90,18 +90,17 @@ class MainActivity : AppCompatActivity() {
         val view = super.onCreateView(parent, name, context, attrs)
 
         locationUpdateViewModel.locationListLiveData.observe(
-            this,
-            { locations ->
-                locations?.let {
-                    if (locations.isEmpty()) {
-                        binding.location.text = getString(R.string.location_unknown)
-                    } else {
-                        binding.location.text =
-                            getString(R.string.location_known, locations.first().toString())
-                    }
+            this
+        ) { locations ->
+            locations?.let {
+                if (locations.isEmpty()) {
+                    binding.location.text = getString(R.string.location_unknown)
+                } else {
+                    binding.location.text =
+                        getString(R.string.location_known, locations.first().toString())
                 }
             }
-        )
+        }
 
         return view
     }
@@ -114,18 +113,17 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.main_menu, menu)
 
         locationUpdateViewModel.receivingLocationUpdates.observe(
-            this,
-            { receivingLocation ->
-                val menuItem = menu?.findItem(R.id.toggle_updates)
-                if (receivingLocation == true) {
-                    menuItem?.setTitle(R.string.stop_location_updates)
-                    // Receiving location updates, clear any notifications we have
-                    applicationContext.cancelAllNotifications()
-                } else {
-                    menuItem?.setTitle(R.string.start_location_updates)
-                }
+            this
+        ) { receivingLocation ->
+            val menuItem = menu?.findItem(R.id.toggle_updates)
+            if (receivingLocation == true) {
+                menuItem?.setTitle(R.string.stop_location_updates)
+                // Receiving location updates, clear any notifications we have
+                applicationContext.cancelAllNotifications()
+            } else {
+                menuItem?.setTitle(R.string.start_location_updates)
             }
-        )
+        }
 
         return true
     }

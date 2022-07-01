@@ -33,10 +33,10 @@ class LocationHistoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.locationsLiveData.observe(viewLifecycleOwner, { locations ->
+        viewModel.locationsLiveData.observe(viewLifecycleOwner) { locations ->
             val adapter =
                 ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, locations)
             binding.locations.adapter = adapter
-        })
+        }
     }
 }
