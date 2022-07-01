@@ -7,11 +7,11 @@ import java.util.*
 
 @Entity(tableName = "location")
 data class LocationEntity(
-    @PrimaryKey val id: UUID = UUID.randomUUID(),
-    val latitude: Double = 0.0,
-    val longitude: Double = 0.0,
-    val foreground: Boolean = true,
-    val recordedAt: Date = Date()
+    @PrimaryKey var id: UUID = UUID.randomUUID(),
+    var latitude: Double = 0.0,
+    var longitude: Double = 0.0,
+    var foreground: Boolean = true,
+    var recordedAt: Date = Date()
 ) {
     override fun toString(): String {
         val appState = if (foreground) {
